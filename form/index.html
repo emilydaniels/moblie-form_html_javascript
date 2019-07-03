@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="form.css">
+    <title>Javascript Form</title>
+</head>
+<body>
+
+    
+  <main onload="load()">
+    <h2>Javascript form</h2>
+    <form action="thanks.html" method="get">
+          <div>
+           <label>First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="John" title="A minimum of 2 characters are required" pattern="[A-Za-z -]{2,}" required>
+          </div>
+          <div>
+            <label>Last Name</label>
+             <input type="text" id="lastName" name="lastName" placeholder="Doe" title="A minimum of 2 characters are required" pattern="[A-Za-z -]{2,}" required>
+           </div>
+           <div>
+               <label>Email</label>
+               <input type="email" id="email" name="email" placeholder="name@gmail.com">
+           </div>
+           <div>
+               <label>Phone Number</label>
+               <input type="tel" id="phoneNumber" placeholder="999-999-9999" name="phoneNumber" required>
+           </div>
+           <div>
+               <label>Zip Code</label>
+               <input type="number" id="number" name="zipCode" placeholder="83402" required>
+           </div>
+           <div>
+              <label>Avalibility Date</label>
+               <input type="date" id="date" name="date">
+           </div>
+           <div>
+            <label>Willingness to relocate</label>
+            <input type="range" id="rating" name="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+            <span id="ratingvalue">5
+            </span>
+          </div>
+           <div>
+            <label>Prefered Location</label>
+            <input name="location" list="list" id="list">
+          </div>
+           
+           <div>
+               <label>Applying for</label>
+               <select name="options" id="options">
+                   <option value="disabled" disabled>Select Option</option>
+                   <option value="Web designer">Web designer</option>
+                   <option value="Web developer">Web developer</option>
+                   <option value="Network administrator">Network administrator</option>
+                   <option value="Quality Assurance">Quality Assurance</option>
+               </select>
+           </div>
+           
+          <div>
+            <label>Qualifications</label>
+            <textarea name="message" id="comment" cols="30" rows="10"></textarea>  
+          </div>
+
+          <div>
+              <input type="submit" value="Save" onclick="save()" class="button">
+          </div>
+    </form>
+  </main>
+  <script src="scripts.js"></script>
+    
+</body>
+</html>
